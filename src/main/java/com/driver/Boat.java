@@ -1,3 +1,5 @@
+package com.driver;
+
 import com.driver.WaterVehicle;
 
 public class Boat implements WaterVehicle
