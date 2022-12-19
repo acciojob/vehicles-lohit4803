@@ -3,10 +3,9 @@ package com.driver;
 
 public class Vehicle
 {
-    public String name;
-    public int currentSpeed;
-    public int currentDirection;
-    public java.lang.Object System;
+    private String name;
+    private int currentSpeed;
+    private int currentDirection;
 
 
     public Vehicle(String name)
@@ -16,30 +15,34 @@ public class Vehicle
         this.currentDirection = 0;
     }
 
-    public Vehicle() {
 
+    public int getCurrentSpeed()
+    {
+        return this.currentSpeed;
     }
-
-
-    public String steer(int direction)
+    public int getCurrentDirection()
+    {
+        return this.currentDirection;
+    }
+    public void steer(int direction)
     {
         this.currentDirection = this.currentDirection+direction;
         //direction is in degrees, add it to the current direction
-        return ("steer method called - The direction is changed to: " + currentDirection + " degrees");
+        System.out.println(("steer method called - The direction is changed to: " + currentDirection + " degrees"));
     }
 
-    public String move(int speed, int direction)
+    public void move(int speed, int direction)
     {
         this.currentSpeed = speed;
         this.currentDirection = direction;
         //set the values of currentSpeed and currentDirection
-        return ("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees");
+        System.out.println(("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees"));
     }
 
-    public String stop()
+    public void stop()
     {
-        this.currentSpeed=0;
-        return ("stop method called - The vehicle is stopped");
+        currentSpeed=0;
+        System.out.println(("stop method called - The vehicle is stopped"));
     }
 
 }
