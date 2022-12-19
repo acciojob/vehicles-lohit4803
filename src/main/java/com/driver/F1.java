@@ -10,6 +10,7 @@ public class F1 extends Car
         //Use arbitrary values for parameters which are not mentioned
     }
 
+
     public void accelerate(int rate)
     {
 
